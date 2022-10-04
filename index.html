@@ -1,0 +1,95 @@
+<html>
+<head>
+  <title>hello ? ..</title>
+  
+  <style>
+  p {
+    margin-bottom:.0002pt;
+    font-size:12.0pt;
+    font-family:"Times New Roman";
+    margin-left:0.5in;
+    margin-right:0.5in;
+    margin-top:0in;
+  }
+
+  a:link { 
+    color: Navy;
+  }
+
+  a:hover {
+    background-color: #99CCFF;
+    text-decoration: none;
+    color: Black;
+  }
+
+  a:visited {
+    color: Gray;
+  }
+  </style>
+</head>
+<body>
+
+<p>&nbsp;</p>
+  
+<p>
+hello world this is a quiet little webpage of some impact ..  
+</p>
+  
+<p>&nbsp;</p>
+  
+<p>
+  <a href="#">Yes We Camp</a>
+  <br>
+  <a href="#">The Leonardo DiCaprio Foundation</a>
+  <br>
+  <a href="#">Coral Gardeners</a>
+  <br>
+  <a href="#">World Wildlife</a>
+  <br>
+  <a href="#">Unicef</a>
+  <br>
+  <a href="#">Ecosia</a>
+</p>
+
+<br>
+<br>
+  
+<ol>
+  
+  <li data-pic="hello-world.png">
+    <a href="https://ecosia.org/">Ecosia</a>
+  </li>
+  
+  <li>
+    <a href="#">World Wildlife</a>
+  </li>
+  
+</ol>
+  
+<br>
+  
+<button>load ulala and go ..</button>
+  
+  
+<script>
+  //var li = document.querySelectorAll('li');
+  var a = document.querySelectorAll('a');
+  
+  function run() {
+    for (i = 0; i < a.length; i++) {
+      var img = document.createElement('img');
+    
+      a[i].appendChild(img);
+      
+      img.src = 'images/' + a[i].href.replace(/^https?:\/\//, '').replace(/\/+$/, '') + '.jpg';
+    }
+  };
+  
+  document.querySelector('button').addEventListener('click', () => {
+    run();
+  });
+</script>  
+  
+  
+</body>
+</html>
